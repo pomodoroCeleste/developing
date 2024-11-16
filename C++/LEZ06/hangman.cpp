@@ -1,10 +1,9 @@
 #include <iostream>
-#include <string>
 #include <fstream>
 #include <vector>
-#include <cstdlib>
-#include <cctype>
+#include <string>
 #include <ctime>
+#include <cstdlib>
 
 using std::cerr;
 using std::cin;
@@ -15,85 +14,88 @@ using std::ifstream;
 using std::vector;
 
 int main() {
-    std:: srand(std::time(NULL)); //o nullptr
+    std::srand(std::time(NULL)); // o nullptr
     char play;
-    cout << "will you play a word game? y/n" << endl;
+    cout << "Will you play a word game? y/n" << endl;
     cin >> play;
     if (play == 'y') {
-        cout << "please, tell me the neame of the file";
-        cout << "listing the words to load." << endl;
+        cout << "Please, tell me the name of the file listing the words to load." << endl;
         string filename;
         cin >> filename;
-       // ifstream in(filename);
-        ifstream in;
-        in.open(filename);
+        ifstream in(filename);
         if (!in) {
-            cerr << "sorry, cannot open file " << filename << endl;
+            cerr << "Sorry, cannot open file " << filename << endl;
             return EXIT_FAILURE;
         }
-        vector <string> words;
+        vector<string> words;
         string s;
         while (in >> s) {
             int cnt = 0;
             for (auto &c : s) {
-                c = tolower(c);
-               // if(ispunct(c)) {
-               //    ++cnt;
-               // }
-                if((c < 'a')|| (c > 'z')) {
+                if ((c < 'a') || (c > 'z')) {
                     ++cnt;
                 }
             }
             if (cnt == 0) {
                 words.push_back(s);
-            }  
+            }
         }
-       // for (auto w : words) {
-       //     cout << w << endl;
-       // }
         in.close();
-        while (play =='y') {
-            auto indx = std::rand()%words.size();
-            string selected_s = words[indx];
-            cout << selected_s << endl;
-            unsigned guesses = 6;
-            cout << "guess my secret word. it has " << selected_s.size() 
-                 << " letters and you guess one letter at a time. you get " << guesses 
-                 << " wrong guesses." << endl;
-            string bad;
-            string mask(selected_s.size(), '-');
-            while ((guesses > 0) && (selected_s != mask)) {
-                cout << "guess a letter: ";
+
+        if (words.empty()) {
+            cerr << "No words to guess in the file." << endl;
+            return EXIT_FAILURE;
+        }
+
+        while (play == 'y') {
+            auto indx = std::rand() % words.size();
+            string target = words[indx];
+            int length = target.length();
+            string attempt(length, '-');
+            string badchars;
+            int guesses = 6;
+
+            cout << "Guess my secret word. It has " << length << " letters, and you can guess one letter at a time." << endl;
+            cout << "You have " << guesses << " incorrect guesses left." << endl;
+
+            while (guesses > 0 && attempt != target) {
+                cout << "Your word: " << attempt << endl;
+                cout << "Guess a letter: ";
                 char letter;
                 cin >> letter;
-                bool found = false;
-                for (decltype(selected_s.size()) i= 0; i != selected_s.size(); i++) {
-                    if (letter == selected_s[i]) {
-                    mask[i] = letter;
-                    found = true;
+
+                if (badchars.find(letter) != string::npos || attempt.find(letter) != string::npos) {
+                    cout << "You already guessed that. Try again." << endl;
+                    continue;
                 }
-            }
-            if (found) {
-                cout << "good guess!" << endl;
-            } else {
-                cout << "oh, bad guess!" << endl;
-                --guesses;
-                bad += letter;
-            }
-            cout << "your word: " << mask << endl;
-            if (selected_s != mask) {
-                cout << "that's right!" << endl;
-            } else {
-                if (bad.size() > 0) {
-                cout << "bad choices: " << bad << endl;
+
+                size_t loc = target.find(letter);
+                if (loc == string::npos) {
+                    cout << "Oh, bad guess!" << endl;
+                    --guesses;
+                    badchars += letter;
+                } else {
+                    cout << "Good guess!" << endl;
+                    for (size_t i = 0; i < length; ++i) {
+                        if (target[i] == letter) {
+                            attempt[i] = letter;
+                        }
+                    }
                 }
-            cout << guesses << " bad guesses left" << endl;
+
+                cout << "You have " << guesses << " incorrect guesses left." << endl;
             }
-        }
-        cout << "will you play another game? y/n" << endl;
-        cin >> play;
+
+            if (attempt == target) {
+                cout << "That's right! The word is " << target << "." << endl;
+            } else {
+                cout << "Sorry, the word was " << target << "." << endl;
+            }
+
+            cout << "Will you play another game? y/n" << endl;
+            cin >> play;
         }
     }
-    cout << "bye!" << endl;
-    return EXIT_SUCCESS;
+
+    return 0;
 }

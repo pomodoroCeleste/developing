@@ -1,7 +1,7 @@
 /*in classe: bookstore.exe
 - per usare direttamente il .txt da linea di comando: bookstore.exe < input.txt
 (ovviamente deve essere già tutto in memoria)
-- se voglio redirigere anche l'output nella stessa directory: bookstore.exe 1 > outputnow.txt 2 > err.txt [NON è COSI, VEDI LEZ.03, IN OGNI CASO IL FLUSSO SI PUò DIVIDERE]
+- se voglio redirigere anche l'output nella stessa directory: [./bookstore < input.txt > bookstoreOutput.txt]
 */
 #include <iostream>
 #include "Sales_item.h"

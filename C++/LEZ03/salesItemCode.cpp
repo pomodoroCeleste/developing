@@ -1,3 +1,5 @@
+// vedi file rinominato "Sales_item.h" per il codice utilizzabile durante compilazione
+
 /*
  * This file contains code from "C++ Primer, Fifth Edition", by Stanley B.
  * Lippman, Josee Lajoie, and Barbara E. Moo, and is covered under the

@@ -1,0 +1,1 @@
+cl /EHsc /W4 main.cpp util_math.cpp util_time.cpp -o test.exe

@@ -1,0 +1,19 @@
+* ARGOMENTI
+- Tipo composto array: introduzione.
+-- Definizione e inizializzazione di un array.
+-- Elaborare gli elementi all'interno di un array: 
+--- forma range-based del for, variabile di controllo con type specifier auto e auto &;  
+--- indicizzazione (subscripting) di un array. 
+- Relazione/legame tra pointer e array:
+-- il compilatore, in generale, converte (il nome di) un array in un pointer al primo elemento dell'array: implicazioni;
+-- utilizzo di un pointer che indirizza un elemento in un array;
+-- pointer arithmetic;
+-- indicizzazione (subscripting) di un array attraverso un pointer che indirizza un elemento in un array.
+- C-style string.
+- Come interfacciarsi con codice che utilizza C-style string e array.
+- Espressioni: introduzione.
+- Comprendere la valutazione di espressioni: i fondamentali.
+-- Precedenza e associatività degli operatori: introduzione.
+-- Ordine di valutazione degli operandi di un operatore: introduzione.
+-- Conversioni implicite degli operandi di un operatore: introduzione.
+-- Concetti di lvalue e rvalue.

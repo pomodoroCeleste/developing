@@ -1,0 +1,19 @@
+* ARGOMENTI
+-- Compilazione separata.
+--- Dichiarazione/Definizione di funzioni.
+--- Dichiarazione/Definizione di variabili. 
+--- Discussione di semplici esempi applicativi.
+- Chiamata di funzioni: passaggio degli argomenti.
+-- Passaggio di argomenti per valore.
+--- Caso particolare dei parametri di tipo pointer.
+-- Passaggio di argomenti per riferimento.
+--- Principali utilizzi dei parametri di tipo reference.
+-- Parametri e const.
+--- Parametri e top-level const.
+--- Parametri di tipo reference/pointer e const.
+--- Vantaggio derivanti dall'utilizzo di parametri di tipo reference to const.
+-- Passaggio di un argomento di tipo array.
+--- Passaggio per valore.
+---- Tecniche per la gestione di parametri di tipo pointer ad array.
+--- Passaggio per riferimento.
+--- Esempio: Argomenti da linea di comando.

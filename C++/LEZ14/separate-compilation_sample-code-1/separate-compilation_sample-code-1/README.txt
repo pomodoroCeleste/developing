@@ -1,0 +1,1 @@
+cl main.cpp util_string.cpp -o test.exe

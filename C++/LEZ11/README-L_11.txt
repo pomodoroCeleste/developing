@@ -1,0 +1,21 @@
+* ARGOMENTI
+- Istruzioni: introduzione.
+- Definizione di istruzione.
+- Istruzioni semplici: null statement e compound statement.
+- Istruzioni per il controllo del flusso di esecuzione.
+-- scope d'istruzione.
+-- Istruzioni che permettono l'esecuzione condizionata di altre istruzioni: 
+--- istruzione if;
+--- istruzione switch.  
+-- Istruzioni che permettono l'esecuzione ripetuta di altre istruzioni: 
+--- istruzione while;
+--- istruzione for;
+--- istruzione range for;
+--- istruzione do while.
+-- Istruzioni che permettono di interrompere il flusso d'esecuzione: 
+--- istruzione break;
+--- istruzione continue.
+- Gestione delle eccezioni: introduzione.
+-- Espressione throw.
+-- Blocco try.
+-- Le classi della libreria standard di C++ che modellano le principali eccezioni.

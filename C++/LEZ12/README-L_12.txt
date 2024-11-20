@@ -1,0 +1,17 @@
+* ARGOMENTI
+- Qualificatore (di tipo) const: introduzione.
+-- Inizializzazione di variabili di tipi primitivi built-in con qualificatore const.
+-- reference to const (dichiarazione, inizializzazione, utilizzo).
+-- pointer to const (dichiarazione, inizializzazione, utilizzo).
+-- const pointer (dichiarazione, inizializzazione, utilizzo).
+-- top-level/low-level const: caratterizzazione/distinzione.
+--- Implicazioni rispetto alle operazioni di inizializzazione/assegnamento.
+--- Implicazioni rispetto all'utilizzo degli specificatori di tipo auto/decltype.  
+-- Conversioni esplicite: utilizzo del (named cast) const_cast.
+- Funzioni: introduzione.
+- Nozioni di base sulle funzioni.
+-- Definizione di funzioni.
+-- Chiamata di funzioni.
+-- Variabili locali.
+--- scope.
+--- lifetime: variabili automatiche/statiche.

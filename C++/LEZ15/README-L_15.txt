@@ -1,0 +1,25 @@
+* ARGOMENTI
+- Definizione di classi: introduzione.
+-- Definizione minimale di una classe.
+--- scope di classe.
+--- Membri/Member di una classe: data member e member function.
+--- Caratterizzazione dei data member.
+--- Utilizzo di una classe definita in maniera minimale.
+-- Data abstraction come tecnica di progettazione/programmazione per la definizione di classi.
+--- Interfaccia di una classe.
+--- Implementazione di una classe.
+-- Encapsulation come meccanismo per nascondere l'implementazione di una classe.
+-- Concetto di abstract data type e benefici derivanti dalla definizione di una classe che sia un abstract data type.
+-- Come estendere la definizione minimale di una classe rispetto alla (tecnica) data abstraction.
+--- Definizione dell'interfaccia di una classe.
+---- Dichiarazione delle member function che fanno parte dell'interfaccia.
+---- Dichiarazione di funzioni ordinarie che fanno parte dell'interfaccia.
+--- Implementazione dell'interfaccia di una classe.
+---- Definizione di member function all'interno della definizione (del corpo) di una classe.
+----- this: concetto/utilizzo.
+----- Utilizzo di const nella dichiarazione/definizione di member function.
+---- Definizione di member function all'esterno della definizione (del corpo) di una classe.
+---- Definizione di member function che restituiscono l'oggetto rispetto a cui sono chiamate.
+---- Definizione di funzioni ordinarie che fanno parte dell'interfaccia di una classe.
+-- Strutturazione del codice che definisce l'interfaccia e l'implementazione di una classe (header file/compilazione separata).
+-- Limiti/problematiche derivanti dalla definizione di una classe che aderisce ai principi di progettazione/programmazione della (tecnica) data abstraction, ma non nasconde la sua implementazione (non implementa alcuna forma di encapsulation).

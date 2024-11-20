@@ -1,0 +1,17 @@
+* ARGOMENTI
+-- Precedenza e associatività degli operatori.
+-- Ordine di valutazione degli operandi di un operatore.
+-- Analisi dei principali opertori built-in rispetto ad associatività, concetti di lvalue e rvalue applicati ai relativi operandi/valore restituito, e tipi dei relativi operandi/valore restituito.
+--- Operatori aritmetici.
+--- Operatori logici e relazionali.
+--- Operatore di assegnamento.
+--- Operatori di incremento e decremento.
+--- Operatore condizionale.
+--- Operatore ,.
+--- Operatore sizeof.
+--- Operatori per l'accesso a membro.
+-- Conversioni tra i tipi built-in.
+--- Concetto di "related types".
+--- Le principali conversioni implicite tra tipi.
+--- Conversioni esplicite tra tipi utilizzando named cast (static_cast).
+--- Conversioni esplicite tra tipi utilizzando old-style cast: considerazioni.

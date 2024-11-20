@@ -1,0 +1,12 @@
+* ARGOMENTI
+- vector "(class) type": introduzione.
+-- Introduzione al concetto di class template.
+-- Istanziazione di una classe specifica a partire da un class template.
+-- Definizione e inizializzazione di oggetti di una classe istanziata dal class template vector.
+-- Operazioni su/con oggetti di una classe istanziata dal class template vector.
+-- Elaborare gli elementi all'interno di una classe istanziata dal class template vector: 
+--- forma range-based del for, variabile di controllo con type specifier auto e auto &;  
+--- indicizzazione (subscripting) di un oggetto di una classe istanziata dal class template vector.
+- Input/output da/su standard input/output: recap 
+- Panoramica dei tipi messi a disposizione dalla libreria standard per gestire l'input/ouput.
+- Lettura/scrittura di file memorizzati su memoria di massa: definizione/inizializzazione/utilizzo di oggetti di tipo ifstream e ofstream. 
